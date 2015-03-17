@@ -23,9 +23,9 @@ exports.index = function(req, res){
 exports.add = function(req, res){
  var Maintexts = require('../models/maintexts').maintexts; // подключились к модели.коллекции
  var maintexts = new Maintexts({
-  'name': 'Галерея',
-  'body': '<p>Галерея</p>',
-  'url': 'gallery'
+  'name': 'Чат',
+  'body': '<p>Чат</p>',
+  'url': 'chat'
  });
 
 maintexts.save(function(){

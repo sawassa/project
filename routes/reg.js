@@ -1,4 +1,4 @@
-var User = require('../models/users').users;
+User = require('../models/users').users;
 var session = require('cookie-session');
 
 exports.send = function(req, res, next){
