@@ -1,0 +1,18 @@
+{
+ "scripts": [],
+ "styles": ["bootstrap/css/bootstrap.min.css","stylesheets/style.css"], 
+ "port":3000,
+ "session":{
+  "secret": "secretworld"
+ },
+ "mongoose":{
+  "uri": "mongodb://localhost/project_db",
+  "options":{
+   "server":{
+    "socketOptions":{
+     "keepAlive": 1
+    }
+   }
+  }
+ }
+}

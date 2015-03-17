@@ -1,0 +1,1 @@
+exports.cabinet = function(req, res){ res.render('cabinet');};

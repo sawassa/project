@@ -1,0 +1,38 @@
+doctype transitional
+html
+  head
+    meta(charset='utf-8')
+    title wake.by
+    //  script.script(src='#{script}')
+    link(href='#{styles[0]}',
+      rel = 'stylesheet')
+    link(href='#{styles[1]}',
+      rel = 'stylesheet')
+  body
+    h1 Вейкбординг в Минске
+      br
+      br
+    .menutop
+      a(href='main') Главная
+      a(href='rixen') Птичь
+      a(href='zna') Цнянское водохранилище
+      a(href='com_lake') Комсомольское озеро
+      a(href='gallery') Галерея
+      a(href='reg') Регистрация
+    .col-md-2
+      | Левый блок
+      h2
+        a.btn.btn-default(href='#') Версия 
+        a.btn.btn-default(href='#') О программе 
+    .col-md-8
+      | Центральный блок
+      h2
+        | Добро пожаловать на сайт
+        block content
+    .col-md-2
+      | Погода Минск
+      // pogoda.by
+      table(width='100%', height='100%', style='background-color:#f2f2f2; font-family:Tahoma; font-size:10px; color:#000000;', cellpadding='0', cellspacing='0')
+        tr
+          td
+            script(type='text/javascript', charset='windows-1251', src='http://pogoda.by/meteoinformer/js/26850_3.js')

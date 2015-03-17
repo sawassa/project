@@ -1,0 +1,34 @@
+body  
+{
+background-image: url(../images/bg2_.jpg);
+background-color: #c7b39b;
+text-align:center;
+}
+.menutop{
+width: 100%;
+display:-moz-box;
+display:-wedhit-flex;
+display:flex;
+text-aline:center;
+margin:0 auto;
+flexdirection:row;
+}
+.menutop a{
+moz-box:1;
+width-flex:1;
+flex:1;
+display:block;
+font-size:14;
+padding:7px 0;
+text-align:center;
+background:green;
+color:white;
+text-decoration:none;
+}
+.menutop a:hover{
+background:#abe3b8;
+color:green;
+}
+.btn{
+width 100%
+}

@@ -1,0 +1,8 @@
+extends layout
+block content
+  form(name = 'Регистрация', method='post', action= 'reg')
+    input(type='text', name ='username', placeholder= 'Логин')
+    br
+    input(type='password', name ='password', placeholder= 'Пароль')
+    br
+    input(type='submit', value='Отправить')
