@@ -10,11 +10,12 @@ var users = require('./routes/users');
 var config = require('./config');
 var gallery = require('./routes/gallery');
 
+var session = require('cookie-session');
 var reg = require('./routes/reg');
 var auth = require('./routes/auth');
 var checkAuth = require('./utils/checkAuth');
 var app = express();
-var session = require('cookie-session');
+
 
 
 // uncomment after placing your favicon in /public
