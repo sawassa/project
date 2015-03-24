@@ -14,6 +14,7 @@ var checkAuth = require('./utils/checkAuth');
 var config = require('./config');
 var gallery = require('./routes/gallery');
 var chat = require('./routes/chat');
+var video = require('./routes/video');
 
 var app = express();
 var http = require('http').Server(app);
@@ -63,6 +64,7 @@ app.get('/gallery', gallery.index);
 app.get('/logout', checkAuth, reg.logout);
 app.get('/cabinet', checkAuth, auth.cabinet);
 app.get('/chat', chat.index);
+app.get('/video', video.index);
 
 /*
 app.get('/', function(req, res){

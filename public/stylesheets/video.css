@@ -1,0 +1,42 @@
+#player{
+ width: 720px;
+ margin: 20px auto; 
+ padding: 10px 5px 5px 5px;
+ background: orange;
+ border: 1px solid red;
+ border-radius: 5px;
+ float:left; 
+}
+
+#buttons{
+ float:left; 
+ width: 140px;
+ height: 26px;
+ padding-left: 2px;
+ margin: 7px 5px;
+ border-solid: 1px green;
+ background: purple;
+}
+
+#play, # mute{
+ padding: 2px 10px;
+ width: 80;
+ border: 1px solid blue;
+ font-weight: bold;
+ border-radius: 5px;
+}
+
+nav{
+  margin: 5px 0px;
+}
+
+#progress{
+ width: 0px;
+ padding: 2px;  
+ height: 16px;
+ background: olive;
+}
+
+.clear{
+ clear:both;
+}

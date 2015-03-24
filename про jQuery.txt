@@ -1,0 +1,119 @@
+подключение jquery
+
+jQuery.min - минимизированный набор методов. Рекомендуется (выше быстродействие на 40%)
+
+
+$('a'); поиск всех ссылок
+$(.class_name);
+$(li > a);
+$([]); по атрибутам
+a.title; ccskrb c title
+a[href^=http]; 
+$a[href?=.exe];   $ - символ селектора
+
+Фильтры
+a:first;  a:last
+:odd, - четные; .evan - нечетные
+:empty - пустые; hidden - скрытые (м.б . не пустой с hidden)
+:input, :radio, :select .... - элементы форм
+у них могут быть атрибуты: .checked, enabled, .disabled ...
+
+$. - все, что после, относится ко всем элементам страницы
+
+$('selector').metod().metod2()...
+
+Изменить  css-свойство в body
+$('body').css('background') - извлечь
+$('body').css('background',css({'background':'#css', 'color': 'white'})) задать новые значения атрибутов
+
+Все методы jsona можно разгруппировать на:
+1. Селекторные (надстройки к селекторам) 
+  Пример: нужно найти ссылку и обратиться к свойству ссылки.
+  $('#link').prev() 
+			.is()
+			.has('spa')
+			.not()
+
+2. Методы css
+$(selector).height()
+		   .width()
+
+3. Методы атрибутов
+$(selector).attr('имя атрибута', 'задаваемое значение')
+		   .addClass('classname')
+		   .removeClass('classname')
+		   
+4. Текстовые методы (html- ные)
+$(selector).text()
+		   .html() - без метода теги не переведутся
+$('[name=email]').val(); - извлечь текст из формы
+
+5. Манипуляции с DOM (document object model)
+-- сразу создают элемент, а потом вставка
+$('<div>').text('текст')
+          .addClass()
+          .appendTo('body') - после тега
+		  .prependTo()
+		  .insertAfter
+		  .insertBefore
+   создали
+-- вставка в уже готовые элементы
+$('modalwindow').append('<div>')
+                .prepend('div')
+				.after()
+				.before()
+
+.wrap() - обернуть текущий метод
+$('a').wrap('<b>') - сделать все a жирными
+      .wrap('<b><em></b><rem>') - сделать все a жирными
+	  .remove() - "неполное удаление" - можно вернуться потом
+	  .detach() - полное удаление
+	  .empty() 
+Пример	  
+var mylink $(selector)....clone();
+$(selector).remove
+
+6. Анимация
+.animate('любые css свойства')
+.animate({
+ width: 200},
+ 2800 /*скорость*/,
+ ,
+ callback (optional))
+ $('header').show('кол-во секунд', callback)
+ $('header').hide('кол-во секунд', callback)
+  .toggle();
+ .slideDown()
+  .slideUp()
+  .fadeIn() - отображение путем изменения прозрачности
+  .fadeOut() - скрытие путем изменения прозрачности
+  .fadeTo(0.5) - изменение прозрачности до заданного параметра
+ 
+7. Событийные методы
+$('selector').click(function(){});
+
+$('selector').mouseOver(function(){});
+
+$('selector').bind('событие', function(){}); - связывает с любым событием
+
+$('selector').bind({
+'событие1': function(){},
+'событие2': function(){}}
+); - связывает с любым событием. Формула с json
+
+8. Ajax - подобные методы (асинхронная связь сервера с браузером). В node.js - это можно делать через сокеты
+.getJson('путь к файлу')
+.getScript('путь к файлу')
+.post('') - закгузка в файл post - данных
+.get() - получение из файла get - данных = load
+
+$.ajax({
+ 'type': 'POST',
+ 'url': 'ajax', - куда
+ 'data':
+ - сами данные
+ 'sucsess': function('data'){
+  $('success-data').html('data');}, -- все содерижимое ajax страницы
+  'error': function(msg){},
+  'beforesend': function(){}
+})

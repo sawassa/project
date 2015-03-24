@@ -1,0 +1,16 @@
+Обзор рынков
+1. Notepad++
+2. IDE
+	PHPStorm
+	WebStorm
+	NetBeince
+	AdobeBreadhets
+	SubLineText3
+3. Браузеры	
+FireFox + fireBug
+
+4. Git (или другие системы контроля версий)
+
+5. Front-End
+
+shema.org - описаны микроформаты данных	

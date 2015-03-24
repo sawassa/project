@@ -1,17 +1,17 @@
 $(function(){
   $('.menutop:eq(0)').bind("mouseover", function(){
-   $('.menutop a').css({ "background": "yellow"});
+   $('.menutop a').css({ "background": "green"});
   });
  $('rixen:eq(0)').bind('mouseover', function(){
-   $('header').css('background', 'yellow');
+   $('header').css('background', 'green');
   }); 
   
  $('zna:eq(0)').bind('mouseover', function(){
-   $('body').css('background', 'yellow');
+   $('body').css('background', 'green');
  }); 
 
  $('chat:eq(0)').bind('mouseover', function(){
-   $('body').css('background', 'yellow');
+   $('body').css('background', 'green');
  });
 
  $('a.btn.btn-default:eq(0)').bind("click", function() {

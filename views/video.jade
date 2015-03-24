@@ -1,0 +1,21 @@
+script.script(src='#{scripts[4]}')
+doctype transitional
+html
+  head
+    h2 video
+    link(href='#{styles[0]}',
+      rel = 'stylesheet')
+    link(href='#{styles[4]}',
+      rel = 'stylesheet')
+    
+    section(id= 'player')
+      video(id = 'media', width =720, height = 400)
+        source(src='http://minkbooks.com/content/trailer.mp4')
+      nav(id = 'buttons')
+        input(type = 'button',id = 'play', value = 'play')
+        input(type = 'button',id = 'mute', value = 'mute')
+        div(id = 'bar')
+          div(id='progress')
+        div(id = 'control')
+          input(type = 'range', id= 'volume', min = 0, max = 1, step = '0.1')
+        div(class= 'clear')
