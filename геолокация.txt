@@ -1,0 +1,10 @@
+Геолокация
+
+getCurrentPosition - текущее положение пользователя;
+watchPosition(location, error, sets) = getCurrentPosition + следит за изменением м/положения;
+clearWatch - отменяет слежение.
+
+enableHighAccuracy - триангуляция - по точке затухания разных вышек. Более точный метод - gps
+
+https://developers.google.com/maps/documentation/javascript/tutorial
+https://code.google.com/apis/console

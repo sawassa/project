@@ -1,0 +1,26 @@
+script.script(src='#{scripts[5]}')
+doctype transitional
+html
+  head
+    h2 geo
+    link(href='#{styles[0]}',
+      rel = 'stylesheet')
+    link(href='#{styles[5]}',
+      rel = 'stylesheet')
+    section(id= 'location')
+      input(type = 'button', id = 'button', value = 'Где я?')
+    meta(name='viewport', content='initial-scale=1.0, user-scalable=no')
+    h2 Гуглягео
+    meta(name='viewport', content='initial-scale=1.0, user-scalable=no')
+    meta(charset='utf-8')
+    style.
+      html, body, #map-canvas {
+      height: 720px;
+      width: 720px;
+      margin: 0px;
+      padding: 0px
+      }
+    script(src='https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true')
+    script(src='js/googlegeo.js')
+  body
+    #map-canvas 

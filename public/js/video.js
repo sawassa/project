@@ -16,17 +16,14 @@ function initiate(){
  progress = document.getElementById('progress');
  volume = document.getElementById('volume');
  play = document.getElementById('play');
- play = addEventListener('click', push); 
- mute = addEventListener('click', sound); 
- bar = addEventListener('click', move); 
- volume = addEventListener('change', level); 
+ mute = document.getElementById('mute');
+ play.addEventListener('click', push); 
+ mute.addEventListener('click', sound); 
+ bar.addEventListener('click', move); 
+ volume.addEventListener('change', level); 
 };
 
-play = document.getElementById('play');
-
-
 function push(){
-//play = document.getElementById('play');
  if (!mmedia.paused && !mmedia.ended){
   mmedia.pause();
   play.value = 'play';
@@ -40,8 +37,6 @@ function push(){
 }
 
 function move(e){
-// e.PreventDefault();
-//bar = document.getElementById('bar');
  if(!mmedia.paused && !mmedia.ended){
  var mouseX = e.pageX - bar.offsetLeft;
  var newTime = mouseX * mmedia.duration / maxim;
@@ -51,7 +46,6 @@ function move(e){
 }
 
 function sound(){
-//mute = document.getElementById('mute'); 
  if(mute.value == 'Mute'){
   mmedia.muted = true;
   mute.value = 'Sound';
@@ -65,11 +59,9 @@ function level(){
  mmedia.volume = volume.value;
 }
 
-
 function status(){
  if(!mmedia.ended){
   var size = parseInt(mmedia.currentTime * maxim / mmedia.duration);
-  
   progress.style.width = size + 'px';
  } else {
   progress.style.width = 0;

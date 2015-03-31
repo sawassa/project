@@ -15,6 +15,8 @@ var config = require('./config');
 var gallery = require('./routes/gallery');
 var chat = require('./routes/chat');
 var video = require('./routes/video');
+var geo = require('./routes/geo');
+var geomesh = require('./routes/geomesh');
 
 var app = express();
 var http = require('http').Server(app);
@@ -65,6 +67,8 @@ app.get('/logout', checkAuth, reg.logout);
 app.get('/cabinet', checkAuth, auth.cabinet);
 app.get('/chat', chat.index);
 app.get('/video', video.index);
+app.get('/geo', geo.index);
+app.get('/geomesh', geomesh.index);
 
 /*
 app.get('/', function(req, res){

@@ -1,0 +1,23 @@
+doctype transitional
+html
+  head
+    h2 маршруты
+    link(href='#{styles[0]}',
+      rel = 'stylesheet')
+        
+    section(id= 'measures')
+      input(type='text', id ='start', placeholder = 'старт')
+      input(type='text', id ='finish', placeholder = 'финиш')
+      input(type = 'button', id = 'go', value = 'Поехали!')
+    meta(name='viewport', content='initial-scale=1.0, user-scalable=no')
+    meta(charset='utf-8')
+    style.
+      html, body, #map-canvas {
+      height: 100%;
+      margin: 0px;
+      padding: 0px
+      }    
+    script(src='https://maps.googleapis.com/maps/api/js?key=&sensor=false')
+    script(src='js/road.js')
+  body
+    #map-canvas 
