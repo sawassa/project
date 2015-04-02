@@ -46,12 +46,12 @@ function move(e){
 }
 
 function sound(){
- if(mute.value == 'Mute'){
+ if(mute.value == 'mute'){
   mmedia.muted = true;
-  mute.value = 'Sound';
+  mute.value = 'sound';
  } else {
   mmedia.muted = false;
-  mute.value = 'Mute';
+  mute.value = 'mute';
  }
 }
 

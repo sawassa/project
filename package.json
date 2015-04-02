@@ -16,6 +16,13 @@
     "nconf": "*",
     "mongoose": "*",
     "crypto": "*",
-    "cookie-session": "*"
+    "cookie-session": "*",
+    "chalk": "latest",
+    "grunt" : "latest",
+    "grunt-contrib-jshint" : "latest",
+    "grunt-contrib-concat" : "latest",
+    "grunt-contrib-uglify" : "latest",
+    "grunt-contrib-cssmin" : "latest",
+    "less": "*"
   }
 }
